@@ -1,4 +1,4 @@
-#Reuben Ortiz 2411091
+
 #pseudocode.
 #write a program that uses a while loop
 #prompt user to enter a positive INT
