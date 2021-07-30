@@ -1,0 +1,49 @@
+########Pseudocode##########
+#Write a program that can convert a Fahrenheit temperature to Celsius.
+#or vice versa.
+#Wrtie two custom functions named temps
+    #first def temp_f_to_c
+        #value returning function. takes a parameter
+            #calculate and print the C equivalent accurate to 3 decimals
+
+    #second def temp_c_to_f should be a void
+        #takes celsius temp as a parameter
+            #should calculate and print the F equivalent accurate to 3 decimals
+
+#import math
+import math
+def main():
+
+    
+    
+    
+
+    #display what the user is doing
+    print('This program will display the temperature in F and C')
+
+    #float user input for temp
+    temp = float(input('Enter a temperature'))
+
+    #string input for fahrenheit or celsius use str(input)
+    outcome = str(input('Was that input Fahrenheit or Celsius c/f/?'))
+
+    #If else statment that'll determine if user picks C or F
+    if outcome == 'f' or outcome == 'F':
+        #f string with user input temp and custom func using temp as parameter
+       print(f'{temp} fahrenheit {temp_f_to_c(temp):.3f} celsius')
+    elif outcome == 'c' or outcome == 'C':
+        print(f'{temp} celsius is {temp_c_to_f(temp):.3f} fahrenheit')
+
+    
+#create custom function first. temp_f_to_c
+def temp_f_to_c(fahrenheit):
+    celsius = (fahrenheit - 32) * 5.0/9.0 #covert f to c
+    return celsius
+
+
+#create second custom function. temp_c_to_f
+def temp_c_to_f(celsius):
+    fahrenheit = (celsius * 9/5) + 32     #convert c to f
+    return fahrenheit
+    
+main()
