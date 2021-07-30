@@ -1,0 +1,30 @@
+#prompt user to enter how many rows
+    #user = input('num here ')
+#colums has to equal same amount of rows
+    #have columns = rows
+#nested for loop. keep it only 2 deep if possible
+    #for '' in rnage(row)
+        #for '' in range('')
+        #print the second for loop. test different end='s or seps's
+#run your code and debug 
+
+def main():
+
+    #user enters rows
+    row = int(input('Number of rows '))
+
+    #columns = rows
+    column = row
+    
+    
+    #nested for loop try to stay 2 deep max
+    for r in range(row):
+
+        #the r above wont run the program properly but the c below does
+            #when added to the print function
+        for c in range(column):
+            print(c, end='' ) #end='' is closer to the example but end=' ' looks better.
+        print()
+        
+main()
+#end code
