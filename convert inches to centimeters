@@ -1,0 +1,52 @@
+#program that displays a table of inches
+ #program will need to convert inches to centimeters
+    #1 inch * 2.54 to convert to cm
+        #var cm = inch * 2.54
+#user will have to enter 'range of inches'
+    #varr range_start
+    #varr range_stop
+    #varr range_step
+#after setting all global varr's. promtp user to enter desired numbers
+ #user will be using a for loop
+#A MUST
+ #'Display the inches accurate to one decimal place left-aligned in a column 8 characters wide'
+#use f string for this ({inch:<8.f}')
+#A MUST
+ #display cm to two decimal places and centered in a column 12 char wide
+    #format f string ({cm:^.12f}')
+#column heading should display the same widths as alignments.
+
+#Display header
+def main():
+    print('Program to convert inches to cm')
+    #place holders for varr starting point
+    inches = 0
+    stop = 0
+    step = 0
+    cm = 0
+
+    #user enters input for the for loop
+    
+    inches = int(input('Number I want to start at in inches: '))
+    stop = int(input('Number I want to stop at: '))
+    step = int(input('Increments I want to increase by '))
+
+    cm = inches * 2.54
+
+    #column heading
+     #inch left aligned, 8 wide. cm center and 12 wide
+    print(f'{"Inches":<8}{"Centimeters":^12}')
+
+    #For statment with conversion
+     #inches need to be 1 decimal, aligned left, 8 wide
+        #cm two decimal, centered, 12 wide
+    for inches in range(inches,stop,step):
+
+        #convert inches to cm
+        
+        cm = inches * 2.54
+
+        #display users output use the criteria as noted above
+        print(f'{inches:<8.1f}{cm:^12.2f}')
+main()
+#end code
