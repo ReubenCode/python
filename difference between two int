@@ -1,0 +1,42 @@
+#import random for random numbers
+import random 
+def main():
+    #local varrs in main
+    num1 = 0
+    num2 = 0
+    more = 'y'
+    
+    #display what the program will be doing    
+    print('This program will take two random numbers between 1-5')
+    print('and display the difference between the two')
+    print() #blank space so it's not bunched together 
+    
+    #while statment to obtain first two random INT
+    while more == 'y' or more =='Y':     #to continue loop. While statment will never end program
+        num1 = (random.randint(1, 5))   #returns a random number between 1-5
+        num2 = (random.randint(1, 5))
+        print(num1, num2)               #prints my random numbers
+        total = show_larger(num1, num2) #call custom varr with random numbers
+
+        
+        #User will enter Y y or Enter to continue        
+        more = (input('Enter y or Y to go again or ENTER to quit'))
+   
+        #custom void function with 2 parameters
+
+def show_larger(ran1, ran2):
+
+    #if ran is greater then ran 2 subtract ran1 from ran2
+    if ran1 > ran2:
+        total = ran1 - ran2
+        print('difference between the two is ', total)
+    #If numbers are equal print. they are equal 
+    elif ran1 == ran2:
+        print('your numbers are equal')
+    #no negative numbers allowed have the user try again
+    elif ran1 < ran2:
+        print('try again no negative numbers allowed here')
+    
+main()
+    
+#end code
