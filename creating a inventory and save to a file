@@ -1,0 +1,27 @@
+#main
+def main():
+
+    #open file named inventory as a txt to Write
+    file = open('inventory.txt','w')
+
+    #prompt first user input. Will be first line in while loop
+    item = input('Enter Item name or Enter to quit ')  #bad practice next time
+
+    #begin while loop
+    # while True:
+    while item != '':
+        
+        quantity = int(input('Enter the quantity of this item. '))
+        unit_price = float(input('Enter the unit price of this item '))
+
+        #write items to file as STR or will crash
+        file.write(item + '\n')
+        file.write(str(quantity) + '\n')
+        file.write(str(unit_price) + '\n')
+        
+        #continuation for loop, last line in loop
+        item = input('Enter Item name or Enter to quit ')
+    #close file
+    file.close()
+    print('Items saved to file')
+main()
