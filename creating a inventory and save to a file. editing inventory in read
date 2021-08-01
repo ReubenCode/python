@@ -1,0 +1,40 @@
+#main
+def main():
+    file = open('inventory.txt', 'r')
+    #accumulator for total price and highest item
+    total_price = 0
+    highest_value = 0
+    highest_item = None
+    count = 0
+    
+    
+    #prime the read
+    item = file.readline()
+
+    #while loop since unknow amount of data is in txt file
+    while item != '':
+        #remove any new line
+        item = item.rstrip('\n')
+
+        qty = int(file.readline())
+        price = float(file.readline())
+        value = qty * price
+        
+        if value > highest_value:
+            highest_value = value
+            highest_item = item
+
+        total_price += value
+        
+        #display item, qty and price                               
+        print('item ',item,' quantity is ',qty,' total value is $',format(value,',.2f'))
+        
+        #retest the loop
+        item = file.readline()
+        
+    #print the total
+    print(f'Value of entire inventory is {total_price:,.2f}')
+    print(f'Highest value item is {highest_item} with value {highest_value:,.2f}')
+    
+    file.close()
+main()
