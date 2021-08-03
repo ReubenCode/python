@@ -1,0 +1,57 @@
+#create main function
+    #create another func called change_list
+#import random as r
+#in main create a empty list
+    #my_list = []
+#use a for loop to add 12 random int randing between 50,100
+    #for i in range 12:
+        #list_rnd = r.randint(50,100)
+#second for loop to iterate over the list and display elements in one line
+
+#display 4th and 9th elements and the smallest.
+
+#import random as r
+import random as r
+#def main
+def main():
+    #create a empty list
+    my_list = []
+    #display what user will be doing
+    print('list of 12 random numbers')
+
+    #generate 12 random numbers and append to my_list
+    for i in range(12):
+        list_rnd = r.randint(50, 100)
+        my_list.append(list_rnd)
+    #second for loop to print 12 random int   
+    for x in my_list:
+        print(x, end='')
+
+    #display list in a stright line seperated by 1 space
+    print(my_list, end=' ')
+    print()
+    #display 4th element
+    print('4th element in the list is',my_list[3],)
+    #display 9th index
+    print('9th element in the list at index 9 is',my_list[9],)
+    #display lowest element
+    print('The lowest value is', min(my_list),)
+    #call change_list func
+    x = change_list(x)
+    (x)
+
+    #change list function
+def change_list(in_put):
+    #display new list size
+    print('size of the list is now 6')
+    #slice list down to 6
+    size6 = in_put[3:9]
+    print('new list is now',size6,)
+    print('list in order is')
+    #sort the new 6 nums in order
+    size6.sort()
+    print(size6)
+    
+main()
+    
+#end code
